@@ -78,7 +78,7 @@ export SINGULARITY_DOCKER_PASSWORD='cyverse harbor CLI secret'
 ```
 The CLI secret is found in the user profile once you login to https://harbor.cyverse.org
 
-<img src="https://github.com/jeffgillan/agisoft-metashape/blob/main/images/harbor.png" width=450>
+<img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/harbor.png" width=450>
 
 <br/>
 <br/>
@@ -151,7 +151,7 @@ Apptainer> cd /opt/metashape-pro
 
 Apptainer> ./metashape.sh --server --host 10.141.33.112 --root /home/u5/jgillan/100_0123
 ```
-<img src="https://github.com/jeffgillan/agisoft-metashape/blob/main/images/server_instance.png" width=600>
+<img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/server_instance.png" width=600>
 
 
 <br/>
@@ -188,7 +188,7 @@ The monitor GUI should launch quickly.
 
 Type the IP address into the *Host Name*. Then click *Connect* 
 
-<img src="https://github.com/jeffgillan/agisoft-metashape/blob/main/images/monitor.png" width=700>
+<img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/monitor.png" width=700>
 
 There should be an indication that the monitor is connected to the server (on the bottom of the monitor window).
 
@@ -226,7 +226,7 @@ Apptainer> ./metashape.sh --worker --host 10.141.33.113 --root /home/u5/jgillan/
 
 If you successfully launched a processing node then you should see the following output
 
-<img src="https://github.com/jeffgillan/agisoft-metashape/blob/main/images/process_node.png" width=700>
+<img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/process_node.png" width=700>
 
 <br/>
 <br/>
@@ -235,7 +235,7 @@ Back on the interactive desktop, you should see that the node was added in the g
 
 
 
-<img src="https://github.com/jeffgillan/agisoft-metashape/blob/main/images/monitor_nodes.png" width=700>
+<img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/monitor_nodes.png" width=700>
 
 <br/>
 <br/>
