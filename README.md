@@ -218,7 +218,7 @@ Once you have the node, get into the Agisoft container and launch a processing n
 ```
 singularity shell agisoft-metashape_cudagl-20.04.sif
 Apptainer> cd /opt/metashape-pro
-Apptainer> ./metashape.sh --worker --host 10.141.33.113 --root /home/u5/jgillan/100_0123 --capability any --platform offscreen
+Apptainer> ./metashape.sh --worker --host 10.141.33.113 --root /home/u5/jgillan/100_0123 --capability any -platform offscreen
 ```
 
 <br/>
