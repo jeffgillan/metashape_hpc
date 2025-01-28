@@ -169,6 +169,9 @@ Apptainer> cd /opt/metashape-pro
 
 Apptainer> ./monitor.sh
 ```
+or
+
+`apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/monitor.sh`
 
 <br/>
 <br/>
@@ -213,12 +216,10 @@ To get a GPU node
 
 This may take some time to get the node
 
-Once you have the node, get into the Agisoft container and launch a processing node
+Once you have the node, type the following command to set up the worker nodes. You need several cpu only and gpu only nodes
 
 ```
-singularity shell agisoft-metashape_cudagl-20.04.sif
-Apptainer> cd /opt/metashape-pro
-Apptainer> ./metashape.sh --worker --host 10.141.33.113 --root /home/u5/jgillan/100_0123 --capability any -platform offscreen
+apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.127 --root /home/u5/jgillan/100_0123 --capability gpu -platform offscreen
 ```
 
 <br/>
