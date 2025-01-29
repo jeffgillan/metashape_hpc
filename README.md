@@ -91,14 +91,14 @@ Next, you will pull the private docker image onto the HPC. Type:
 
 ## Launch Metashape GUI
 
-And then type the following to run the container. This should launch the Agisoft GUI. 
+Type the following to run the container. This should launch the Agisoft GUI. 
 
-`singularity exec agisoft-metashape:cudagl-20.04 /opt/metashape-pro/metashape.sh`
+`singularity exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh`
 
 <br/>
 <br/>
 
-If the .sif file is already in the HPC directory, you can launch the container with:
+Alternatively, you can launch the container with the following commands:
 
 ```
 singularity shell agisoft-metashape_cudagl-20.04.sif  ## get into the container shell
@@ -107,7 +107,9 @@ Apptainer> cd /opt/metashape-pro
 
 Apptainer> ./metashape.sh
 ```
+
 If the license server is working, the Agisoft GUI should launch quickly. If they is a large delay, the license server may be down. After serveral minutes, the search for the license server will time out, and the GUI will launch anyway but without license. 
+
 
 <br/>
 <br/>
@@ -134,6 +136,10 @@ Fill in the *Host Name* with IP address we looked up in the previous step. (i.e.
 Port Number should be *5840*
 
 *Root* is the directory where the image data is kept.  For data in personal directory use `/home/ug/jgillan`
+
+Within the same *Metashape Preferences* menu, go to the *GPU* tab and make sure the button for *Use CPU when performing GPU accelerated processing* in UNCHECKED.
+
+Within the same *Metashape Preferences* menu, go to *Advanced* tab and make sure the button *Enable fine-level task subdivision* is CHECKED.
 
 Click OK to close the *Preferences* dialogue box. 
 
@@ -219,10 +225,20 @@ To get a GPU node
 
 This may take some time to get the node
 
-Once you have the node, type the following command to set up the worker nodes. You need several cpu only and gpu only nodes
+Once you have the node, type the following command to set up the worker nodes. You need several cpu only and gpu only nodes because different processing steps of Metashape require differnt resources. 
+
+
+Launch a GPU node
 
 ```
 apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.127 --root /home/u5/jgillan/100_0123 --capability gpu -platform offscreen
+```
+<br/>
+
+Launch of CPU Node
+
+```
+apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.127 --root /home/u5/jgillan/100_0123 --capability cpu -platform offscreen
 ```
 
 <br/>
