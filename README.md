@@ -188,19 +188,6 @@ Apptainer> cd /opt/metashape-pro
 Apptainer> ./monitor.sh
 ```
 
-
-
-<br/>
-<br/>
-
-You should now have 3 terminals each doing something different 
-
-Terminal 1: Metashape GUI
-
-Terminal 2: Server Node
-
-Terminal 3: Monitor
-
 <br/>
 <br/>
 
@@ -214,6 +201,15 @@ There should be an indication that the monitor is connected to the server (on th
 
 <br/>
 <br/>
+
+
+You should now have 3 terminals each doing something different 
+
+Terminal 1: Metashape GUI
+
+Terminal 2: Server Node
+
+Terminal 3: Monitor
 
 ## Launch Processing Nodes
 
