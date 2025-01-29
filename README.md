@@ -171,11 +171,14 @@ Apptainer> ./metashape.sh --server --host 10.141.33.112 --root /home/u5/jgillan/
 
 <br/>
 <br/>
-Open an additional terminal. 
 
+## Launch Network Monitor
 
+Open an additional terminal within your interactive desktop 
 
+`apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/monitor.sh`
 
+or
 
 ```
 singularity shell agisoft-metashape_cudagl-20.04.sif
@@ -184,9 +187,8 @@ Apptainer> cd /opt/metashape-pro
 
 Apptainer> ./monitor.sh
 ```
-or
 
-`apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/monitor.sh`
+
 
 <br/>
 <br/>
@@ -231,20 +233,20 @@ To get a GPU node
 
 This may take some time to get the node
 
-Once you have the node, type the following command to set up the worker nodes. You need several cpu only and gpu only nodes because different processing steps of Metashape require differnt resources. 
+Once you have the node, type the following command to launch nodes. 
 
 
 Launch a GPU node
 
 ```
-apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.127 --root /home/u5/jgillan/100_0123 --capability gpu -platform offscreen
+apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.33.112 --root /home/u5/jgillan/100_0123 --capability gpu -platform offscreen
 ```
 <br/>
 
 Launch of CPU Node
 
 ```
-apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.127 --root /home/u5/jgillan/100_0123 --capability cpu -platform offscreen
+apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.123 --root /home/u5/jgillan/100_0123 --capability cpu -platform offscreen
 ```
 
 <br/>
@@ -257,15 +259,22 @@ If you successfully launched a processing node then you should see the following
 <br/>
 <br/>
 
-Back on the interactive desktop, you should see that the node was added in the graphical monitor
-
+Back on the interactive desktop, you should see that the node was added in the network monitor
 
 
 <img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/monitor_nodes.png" width=700>
 
+Repeat the process of *Launching Processing Nodes* to add more processing power for your Metashape project. You need several cpu only and several gpu only nodes because different processing steps of Metashape require different resources.
+
+
+
 <br/>
 <br/>
-<br/>
+
+## Regular Metashape Workflow
+
+Now that you have your processing engine set-up, you can go back to the Metashape GUI and go through the normal workflow. Before any processing can occur, be sure that you have saved the project as .psx file. 
+
 <br/>
 
 
