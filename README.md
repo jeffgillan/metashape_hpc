@@ -151,6 +151,9 @@ Apptainer> cd /opt/metashape-pro
 
 Apptainer> ./metashape.sh --server --host 10.141.33.112 --root /home/u5/jgillan/100_0123
 ```
+or
+
+
 <img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/server_instance.png" width=600>
 
 
@@ -208,11 +211,11 @@ In the terminal type:
 
 Request an interactive processing node
 
-`interactive -n 8 -m 16GB -a jgillan -t 02:00:00`
+`interactive -n 8 -m 6GB -a jgillan -t 04:00:00`
 
 To get a GPU node
 
-`interactive -g -n 8 -m 16GB -a jgillan -t 02:00:00`
+`interactive -g -n 8 -m 9GB -a jgillan -t 04:00:00`
 
 This may take some time to get the node
 
