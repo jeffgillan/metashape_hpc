@@ -211,13 +211,18 @@ Terminal 2: Server Node
 
 Terminal 3: Monitor
 
+<br/>
+
 ## Launch Processing Nodes
 
 In Open OnDemand, launch *Clusters* >>> *Shell Access*. This will open a terminal
 
-In the terminal type:
+In the terminal choose your HPC system by typing for example: 
 `ocelote`
 
+It is probably a good idea that all components of your network processing system use the same HPC
+
+<br/>
 
 Request an interactive processing node
 
@@ -229,17 +234,17 @@ To get a GPU node
 
 This may take some time to get the node
 
-Once you have the node, type the following command to launch nodes. 
+Once you have the node, type the following commands to launch workers. 
 
 
-Launch a GPU node
+Launch GPU worker node:
 
 ```
 apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.33.112 --root /home/u5/jgillan/100_0123 --capability gpu -platform offscreen
 ```
 <br/>
 
-Launch of CPU Node
+Launch CPU worker node:
 
 ```
 apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.123 --root /home/u5/jgillan/100_0123 --capability cpu -platform offscreen
@@ -277,7 +282,7 @@ Now that you have your processing engine set-up, you can go back to the Metashap
 
 
 
-### Transfer data from one user to another on HPC
+## Transfer data from one user to another on HPC
 One option is to invite a user to join your group. The user can get files that are in the group director `/groups/jgillan`. After the user gets the file, then you can remove them from your group, if you want. 
 
 You can add and remove people to the group by going here https://portal.hpc.arizona.edu/
@@ -288,16 +293,7 @@ You can add and remove people to the group by going here https://portal.hpc.ariz
 
 
 
-
-
-
-
-
-
-
-
-
-### Logging into UA HPC from local command line
+## Logging into UA HPC from local command line
 
 
 If you have a UA account, to connect to the HPC you need to use `ssh` ([Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)). Open a terminal, and type:
