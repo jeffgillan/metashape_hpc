@@ -135,7 +135,7 @@ Fill in the *Host Name* with IP address we looked up in the previous step. (i.e.
 
 Port Number should be *5840*
 
-*Root* is the directory where the image data is kept.  For data in personal directory use `/home/ug/jgillan`
+*Root* is the directory where the image data is kept.  For data in personal directory use `/home/ug/jgillan/100_0123`
 
 Within the same *Metashape Preferences* menu, go to the *GPU* tab and make sure the button for *Use CPU when performing GPU accelerated processing* in UNCHECKED.
 
@@ -148,7 +148,14 @@ Click OK to close the *Preferences* dialogue box.
 
 ### Start a Server Node in Server Mode
 
-In the terminal type:
+Back at the terminal, type:
+
+
+```
+apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --server --host 10.141.33.112 --root /home/u5/jgillan/100_0123 
+```
+
+Alternatively, you could type:
 
 ```
 singularity shell agisoft-metashape_cudagl-20.04.sif
@@ -157,7 +164,6 @@ Apptainer> cd /opt/metashape-pro
 
 Apptainer> ./metashape.sh --server --host 10.141.33.112 --root /home/u5/jgillan/100_0123
 ```
-or
 
 
 <img src="https://github.com/jeffgillan/agisoft_metashape/blob/main/images/server_instance.png" width=600>
