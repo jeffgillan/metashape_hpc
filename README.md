@@ -11,7 +11,7 @@ The University of Arizona [Data Science Institute](https://datascience.arizona.e
 * [Floating license activation procedure](https://agisoft.freshdesk.com/support/solutions/articles/31000169229--metashape-2-x-floating-license-activation-procedure)
 * [How to run a license server as a system service](https://agisoft.freshdesk.com/support/solutions/articles/31000169438--metashape-2-x-how-to-run-license-server-as-a-system-service)
 * To use the license, users need to have or create a file called `server.lic`. This file specifies the IP address and port of the license server.
-* The `server.lic` file should be placed within the local directory where Metashape is installed. For linux machines, the location would be `/opt/metashape-pro`. For Windows machines, the location could be `C:/program files/agisoft/metashape pro/` or similar. 
+* The `server.lic` file should be placed within the local directory where Metashape is installed. For linux machines, the location would be `/opt/metashape-pro`. For Windows machines, the location could be `C:/program files/agisoft/metashape pro/` or similar. For macOS users, the location could be `/Library/Application Support/Agisoft/Licensing/licenses`
 * The license information is not publicized to prevent unauthorized people from using it. Please contact Jeff Gillan (jgillan@arizona.edu) or Tyson Swetnam (tswetnam@arizona.edu) if you are interested in using the license. 
  
 
