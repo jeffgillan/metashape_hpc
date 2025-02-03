@@ -135,7 +135,7 @@ Fill in the *Host Name* with IP address we looked up in the previous step. (i.e.
 
 Port Number should be *5840*
 
-*Root* is the directory where the image data is kept.  For data in personal directory use `/home/ug/jgillan/100_0123`
+*Root* is the directory where the image data is kept.  For data in personal directory use `/home/u5/jgillan/100_0123`
 
 Within the same *Metashape Preferences* menu, go to the *GPU* tab and make sure the button for *Use CPU when performing GPU accelerated processing* in UNCHECKED.
 
