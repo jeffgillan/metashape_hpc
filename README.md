@@ -55,7 +55,7 @@ docker run --gpus all -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /h
 <br/>
 
 ## Metashape on HPC
-Agisoft Metashape can run on a single local computer, but it is also designed to run across multiple processing nodes in order to speed up processing of large imagery datasets. 
+Agisoft Metashape can run on a single local computer, but it is also designed to run across multiple processing nodes in order to speed up processing of large imagery datasets. See the [HPC Documentation](https://hpcdocs.hpc.arizona.edu/).
 
 ### Transfer Data onto HPC directories
 
