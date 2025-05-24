@@ -226,11 +226,11 @@ It is probably a good idea that all components of your network processing system
 
 Request an interactive processing node
 
-`interactive -n 8 -m 6GB -a jgillan -t 04:00:00`
+`interactive -n 32 -m 6GB -a jgillan -t 24:00:00`
 
 To get a GPU node
 
-`interactive -g -n 8 -m 9GB -a jgillan -t 04:00:00`
+`interactive -g -n 16 -m 9GB -a jgillan -t 24:00:00`
 
 This may take some time to get the node
 
@@ -240,14 +240,14 @@ Once you have the node, type the following commands to launch workers.
 Launch GPU worker node:
 
 ```
-apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.33.112 --root /home/u5/jgillan/100_0123 --capability gpu -platform offscreen
+apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.33.90 --root /groups/jgillan/gillan_lizard/images --capability gpu -platform offscreen
 ```
 <br/>
 
 Launch CPU worker node:
 
 ```
-apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.123 --root /home/u5/jgillan/100_0123 --capability cpu -platform offscreen
+apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.33.90 --root /groups/jgillan/gillan_lizard/images --capability cpu -platform offscreen
 ```
 
 <br/>
