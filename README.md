@@ -226,7 +226,7 @@ It is probably a good idea that all components of your network processing system
 
 Request an interactive processing node
 
-`interactive -n 32 -m 6GB -a jgillan -t 24:00:00`
+`interactive -n 16 -m 6GB -a jgillan -t 24:00:00`
 
 To get a GPU node
 
@@ -275,6 +275,15 @@ Repeat the process of *Launching Processing Nodes* to add more processing power 
 ## Regular Metashape Workflow
 
 Now that you have your processing engine set-up, you can go back to the Metashape GUI and go through the normal workflow. Before any processing can occur, be sure that you have saved the project as .psx file. 
+
+
+It is recommended to use the _Batch_ processing method. This way, the project is saved after completing each task. 
+
+Image Matching - GPU Distributed
+Align Photos - CPU distributed but final merging (60-100%) is on one node
+Optimize Alignment - CPU - cannot be distributed
+
+
 
 <br/>
 
