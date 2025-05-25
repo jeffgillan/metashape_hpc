@@ -240,7 +240,7 @@ Once you have the node, type the following commands to launch workers.
 Launch GPU worker node:
 
 ```
-apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.65 --root /groups/jgillan/gillan_lizard/images --capability gpu -platform offscreen
+apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.159 --root /groups/jgillan/gillan_lizard/images --capability gpu -platform offscreen
 ```
 <br/>
 
