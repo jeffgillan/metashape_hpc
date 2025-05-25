@@ -247,7 +247,7 @@ apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metash
 Launch CPU worker node:
 
 ```
-apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.65 --root /groups/jgillan/gillan_lizard/images --capability cpu -platform offscreen
+apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.159 --root /groups/jgillan/gillan_lizard/images --capability cpu -platform offscreen
 ```
 
 <br/>
