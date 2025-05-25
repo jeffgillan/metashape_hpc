@@ -282,7 +282,8 @@ It is recommended to use the _Batch_ processing method. This way, the project is
 Image Matching - GPU Distributed
 Align Photos - CPU distributed but final merging (60-100%) is on one node
 Optimize Alignment - CPU - cannot be distributed
-
+Build Depth Maps - GPU distributed
+Build Point Cloud - CPU distributed but final merging (60-100%) is on one node
 
 
 <br/>
