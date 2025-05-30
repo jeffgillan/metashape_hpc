@@ -272,18 +272,25 @@ Repeat the process of *Launching Processing Nodes* to add more processing power 
 <br/>
 <br/>
 
-## Regular Metashape Workflow
+## Metashape Workflow
 
-Now that you have your processing engine set-up, you can go back to the Metashape GUI and go through the normal workflow. Before any processing can occur, be sure that you have saved the project as .psx file. 
+Now that you have your processing engine set-up, you can go back to the Metashape GUI and go through the normal workflow. Before any processing can occur, be sure that you have saved the project as .psx file. See this [document](https://uidronelab.org/wp-content/uploads/2024/07/Lab-3-Metashape-Introduction.pdf) for a general Metashape workflow. 
 
 
 It is recommended to use the _Batch_ processing method. This way, the project is saved after completing each task. 
 
-Image Matching - GPU Distributed
-Align Photos - CPU distributed but final merging (60-100%) is on one node
-Optimize Alignment - CPU - cannot be distributed
-Build Depth Maps - GPU distributed
-Build Point Cloud - CPU distributed but final merging (60-100%) is on one node
+### Resource Use During Workflow
+* Image Matching - GPU Distributed
+* Align Photos - CPU distributed but final merging (60-100%) is on one node
+* Optimize Alignment - CPU - cannot be distributed
+* Build Depth Maps - GPU distributed
+* Build Point Cloud - CPU distributed but final merging (60-100%) is on one node. This is the single longest task in the workflow.
+
+### Strategies to Reduce Processing Time for Large Datasets
+
+* _Reduce Overlap_
+* 
+
 
 
 <br/>
