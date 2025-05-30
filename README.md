@@ -290,7 +290,7 @@ It is recommended to use the _Batch_ processing method. This way, the project is
 
 * _Reduce Overlap_ - tools >> Reduce Overlap
 
-This tool allows you to reduce the number of images used in the dense point cloud creation. You need to have an initial alignment already completed and low quality mesh model created. In the Reduce Overlap tool, you can choose how many camera angles are disabled. For example, if you type Surface Coverage = 3. Then it will aim to keep 3 images for each surface face, the rest disabled. A low Surface Coverage value will disable more images, while a higher Surface Coverage value will disable less images. 
+This tool allows you to reduce the number of images used in the dense point cloud creation. You need to have an initial alignment already completed and low quality mesh model created. In the Reduce Overlap tool, you can choose how many camera angles are sufficient for each mesh face. For example, if you type Surface Coverage = 3. Then it will aim to keep 3 images for each surface face, the rest disabled. A low Surface Coverage value will disable more images, while a higher Surface Coverage value will disable less images. It's not clear how it chooses which images to disable. 
 
 
 
