@@ -240,14 +240,14 @@ Once you have the node, type the following commands to launch workers.
 Launch GPU worker node:
 
 ```
-apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.159 --root /groups/jgillan/gillan_lizard/images --capability gpu -platform offscreen
+apptainer exec --nv agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.11 --root /groups/jgillan/gillan_lizard/images --capability gpu -platform offscreen
 ```
 <br/>
 
 Launch CPU worker node:
 
 ```
-apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.159 --root /groups/jgillan/gillan_lizard/images --capability cpu -platform offscreen
+apptainer exec agisoft-metashape_cudagl-20.04.sif /opt/metashape-pro/metashape.sh --worker --host 10.141.32.11 --root /groups/jgillan/gillan_lizard/images --capability cpu -platform offscreen
 ```
 
 <br/>
@@ -280,11 +280,12 @@ Now that you have your processing engine set-up, you can go back to the Metashap
 It is recommended to use the _Batch_ processing method. This way, the project is saved after completing each task. 
 
 ### Resource Use During Workflow
-* Image Matching - GPU Distributed
-* Align Photos - CPU distributed but final merging (60-100%) is on one node
-* Optimize Alignment - CPU - cannot be distributed
-* Build Depth Maps - GPU distributed
-* Build Point Cloud - CPU distributed but final merging (60-100%) is on one node. This is the single longest task in the workflow.
+* Image Matching - Networked GPUs 
+* Align Photos - Networked CPUs but final merging (60-100%) is on one node
+* Optimize Alignment - Single CPU 
+* Build Depth Maps - Networked GPU
+* Build Point Cloud - Networked CPUs but final merging (60-100%) is on one node. This is the single longest task in the workflow.
+* Build Model - Networked GPUs for the first 33%, then is single GPU for the remaining 66%
 
 ### Strategies to Reduce Processing Time for Large Datasets
 
