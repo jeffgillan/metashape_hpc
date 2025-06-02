@@ -279,9 +279,9 @@ Now that you have your processing engine set-up, you can go back to the Metashap
 
 It is recommended to use the _Batch_ processing method. This way, the project is saved after completing each task. 
 
-### Resource Use During Workflow
+### Resource Use During Workflow (Lizard Rock)
 * Image Matching - Networked GPUs 
-* Align Photos - Networked CPUs but final merging (60-100%) is on one node
+* Align Photos - Networked CPUs but final merging (60-100%) is on one node (9 hours)
 * Optimize Alignment - Single CPU 
 * Build Depth Maps - Networked GPU
 * Build Point Cloud - Networked CPUs but final merging (60-100%) is on one node. This is the single longest task in the workflow.
